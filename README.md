@@ -24,6 +24,7 @@ Import-Module PSLogAnalyticsWriter -ArgumentList v2
 ## Example
 ```PowerShell
 Import-Module PSMSAL
+Import-Module PSLogAnalyticsWriter -ArgumentList v2
 
 #Get token
 $Params = @{
@@ -43,7 +44,7 @@ $Object = [PSCustomObject]@{
   Message      = "Custom Message"
 }
 
-#Write to Log Analytics
+#Write to Log Analytics using Logs Ingestion API (v2)
 $Log = @{
   AccessToken = $Token.AccessToken
   DCEUri = "https://test-data-collection-endpoint.westeurope-1.ingest.monitor.azure.com"
